@@ -124,9 +124,9 @@ class WebService(server.Site, object):
             pass
         else:
             line = self._logFormatter(self._logDateTime, request) + u"\n"
-            if self._nativeize:
-                line = nativeString(line)
-            # If we're on Python3, we don't need to encode it
-            elif _PY3 is False:
-                line = line.encode("utf-8")
+#             if self._nativeize:
+#                 line = nativeString(line)
+#             # If we're on Python3, we don't need to encode it
+#             elif _PY3 is False:
+#                 line = line.encode("utf-8")
             logFile.write(line)
